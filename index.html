@@ -24,6 +24,7 @@
     <li><a href="#descargas">Descargas</a></li>
     <li><a href="#comparativa">Comparativa</a></li>
     <li><a href="#equipo">Equipo</a></li>
+    <li><a href="#" class="nav-tech-link" id="btn-portal-nav">⚙ Portal Técnico</a></li>
   </ul>
 
   <a href="#descargas" class="nav-cta">⬇ Descargar</a>
@@ -42,6 +43,7 @@
   <a href="#descargas">Descargas</a>
   <a href="#comparativa">Comparativa</a>
   <a href="#equipo">Equipo</a>
+  <a href="#" class="nav-tech-drawer" id="btn-portal-drawer">⚙ Portal Técnico</a>
 </nav>
 
 <!-- ═══ HERO ═══ -->
@@ -547,7 +549,7 @@
         <img src="Christian.jpeg" alt="Christian">
       </div>
       <div class="member-name">Christian</div>
-      <div class="member-role">Desarrollo de la Estructura y CAD &amp; App</div>
+      <div class="member-role">Desarrollo de la Estructura &amp; CAD</div>
     </div>
 
   </div>
@@ -579,6 +581,41 @@
   <span class="footer-text">© 2026 V.E.S.T.A. — Exoesqueleto Inteligente · Todos los derechos reservados</span>
   <span class="footer-ipn">IPN · México</span>
 </footer>
+
+<!-- ═══ MODAL PORTAL TÉCNICO ═══ -->
+<div class="tech-overlay" id="tech-overlay" aria-modal="true" role="dialog" aria-label="Portal Técnico V.E.S.T.A.">
+  <div class="tech-modal">
+    <button class="tech-close" id="tech-close" aria-label="Cerrar">✕</button>
+
+    <div class="tech-modal-header">
+      <div class="tech-modal-icon">⚙</div>
+      <div class="tech-modal-title">Portal Técnico</div>
+      <div class="tech-modal-sub">V.E.S.T.A. — Configuración &amp; Calibración</div>
+    </div>
+
+    <p class="tech-modal-desc">Acceso al panel de configuración y calibración del exoesqueleto. Selecciona tu tipo de acceso para continuar.</p>
+
+    <!-- Invitado -->
+    <div class="tech-access-block tech-guest-block">
+      <div class="tech-block-label">Modo Invitado</div>
+      <p class="tech-block-desc">Exploración del portal sin privilegios de modificación.</p>
+      <button class="btn-tech-guest" id="btn-guest-enter">Entrar como Invitado →</button>
+    </div>
+
+    <div class="tech-divider-or"><span>o</span></div>
+
+    <!-- Técnico -->
+    <div class="tech-access-block tech-tech-block">
+      <div class="tech-block-label">Acceso Técnico</div>
+      <p class="tech-block-desc">Introduce el código de acceso para técnicos autorizados.</p>
+      <div class="tech-input-row">
+        <input type="password" class="tech-input" id="tech-code-input" placeholder="Código de acceso" autocomplete="off" maxlength="32">
+        <button class="btn-tech-enter" id="btn-tech-enter">Acceder</button>
+      </div>
+      <div class="tech-error" id="tech-error">Código incorrecto. Verifica e intenta de nuevo.</div>
+    </div>
+  </div>
+</div>
 
 <script src="vesta.js"></script>
 </body>
