@@ -115,7 +115,7 @@
   document.querySelectorAll('.dl-android').forEach(btn => {
     btn.addEventListener('click', () => {
       downloadLocal(
-        'V.E.S.T.A..apk',
+        'V.E.S.T.A.apk',
         'Descarga de APK iniciada — V.E.S.T.A. Monitor',
         '🤖'
       );
@@ -126,7 +126,7 @@
   document.querySelectorAll('.dl-windows').forEach(btn => {
     btn.addEventListener('click', () => {
       downloadLocal(
-        'V.E.S.T.A..zip',
+        'V.E.S.T.A-Windows.zip',
         'Descarga de V.E.S.T.A. para Windows iniciada — extrae el .zip y ejecuta vesta_app.exe',
         '🪟'
       );
