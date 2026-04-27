@@ -126,8 +126,8 @@
   document.querySelectorAll('.dl-windows').forEach(btn => {
     btn.addEventListener('click', () => {
       downloadLocal(
-        'V.E.S.T.A..exe',
-        'Descarga de V.E.S.T.A. para Windows iniciada',
+        'V.E.S.T.A..zip',
+        'Descarga de V.E.S.T.A. para Windows iniciada — extrae el .zip y ejecuta vesta_app.exe',
         '🪟'
       );
     });
