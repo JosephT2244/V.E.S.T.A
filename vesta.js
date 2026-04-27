@@ -88,11 +88,22 @@
     toast._timeout = setTimeout(() => toast.classList.remove('show'), 3500);
   }
 
-  /* ── HELPER: descarga archivo local ── */
-  function downloadLocal(filename, toastMsg, toastIcon) {
+  const downloadAssets = {
+    android: {
+      url: 'https://media.githubusercontent.com/media/JosephT2244/V.E.S.T.A/main/V.E.S.T.A.apk',
+      name: 'V.E.S.T.A.apk'
+    },
+    windows: {
+      url: 'https://media.githubusercontent.com/media/JosephT2244/V.E.S.T.A/main/V.E.S.T.A-Windows.zip',
+      name: 'V.E.S.T.A-Windows.zip'
+    }
+  };
+
+  /* ── HELPER: descarga archivo ── */
+  function downloadLocal(fileUrl, toastMsg, toastIcon, downloadName) {
     const a = document.createElement('a');
-    a.href = filename;
-    a.download = filename;
+    a.href = fileUrl;
+    a.download = downloadName || fileUrl.split('/').pop() || '';
     document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);
@@ -115,9 +126,10 @@
   document.querySelectorAll('.dl-android').forEach(btn => {
     btn.addEventListener('click', () => {
       downloadLocal(
-        'V.E.S.T.A.apk',
+        downloadAssets.android.url,
         'Descarga de APK iniciada — V.E.S.T.A. Monitor',
-        '🤖'
+        '🤖',
+        downloadAssets.android.name
       );
     });
   });
@@ -126,9 +138,10 @@
   document.querySelectorAll('.dl-windows').forEach(btn => {
     btn.addEventListener('click', () => {
       downloadLocal(
-        'V.E.S.T.A-Windows.zip',
+        downloadAssets.windows.url,
         'Descarga de V.E.S.T.A. para Windows iniciada — extrae el .zip y ejecuta vesta_app.exe',
-        '🪟'
+        '🪟',
+        downloadAssets.windows.name
       );
     });
   });
