@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Compra un exoesqueleto V.E.S.T.A. 100% personalizado. Configura módulos, uso, medidas y solicita cotización.">
+<title>Compra Personalizada — V.E.S.T.A.</title>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;500;600;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo-wrap"><img src="Logo V.E.S.T.A..png" alt="Logo V.E.S.T.A." class="nav-logo-img"><span class="nav-logo-text">V.E.S.T.A.</span></a>
+  <ul class="nav-links">
+    <li><a href="producto.html">Producto</a></li>
+    <li><a href="producto.html#funcionamiento">Sistema</a></li>
+    <li><a href="app.html">App</a></li>
+    <li><a href="compra.html" class="nav-active">Comprar</a></li>
+    <li><a href="galeria.html">Galería</a></li>
+    <li><a href="descargas.html">Descargas</a></li>
+    <li><a href="equipo.html">Equipo</a></li>
+    <li><a href="https://josepht2244.github.io/technical_V.E.S.T.A.-/" class="nav-tech-link" target="_blank" rel="noopener">Portal Técnico</a></li>
+  </ul>
+  <a href="#compra" class="nav-cta">Cotizar</a>
+  <button class="nav-toggle" id="nav-toggle" aria-label="Menú"><span></span><span></span><span></span></button>
+</nav>
+
+<nav class="nav-drawer" id="nav-drawer">
+  <a href="producto.html">Producto</a>
+  <a href="producto.html#funcionamiento">Sistema</a>
+  <a href="app.html">App</a>
+  <a href="compra.html">Comprar</a>
+  <a href="galeria.html">Galería</a>
+  <a href="descargas.html">Descargas</a>
+  <a href="equipo.html">Equipo</a>
+  <a href="https://josepht2244.github.io/technical_V.E.S.T.A.-/" class="nav-tech-drawer" target="_blank" rel="noopener">Portal Técnico</a>
+</nav>
+
+<section id="compra" class="page-hero">
+  <div class="section-tag">Compra personalizada</div>
+  <h1 class="section-title">Compra un exoesqueleto <span>100% personalizado</span></h1>
+  <p class="section-desc">Cada unidad V.E.S.T.A. se adapta a medidas corporales, tipo de actividad, nivel de asistencia, módulos requeridos y contexto de uso.</p>
+
+  <div class="purchase-grid">
+    <div class="purchase-showcase">
+      <div class="purchase-image-wrap"><img src="Exoesqueleto isometrico.png" alt="Exoesqueleto V.E.S.T.A. personalizado" class="purchase-render"></div>
+      <div class="purchase-price-card">
+        <span class="price-label">Configuración base desde</span>
+        <strong>$525 USD</strong>
+        <span class="price-note">El precio final depende de medidas, módulos, actuadores y nivel de integración.</span>
+      </div>
+      <div class="included-list">
+        <div><span>01</span> Medición antropométrica y ajuste ergonómico</div>
+        <div><span>02</span> Selección de módulos: brazo derecho, izquierdo o bilateral</div>
+        <div><span>03</span> Calibración de sensores, app y modos de asistencia</div>
+      </div>
+    </div>
+
+    <form class="custom-order" id="custom-order-form">
+      <div class="form-head">
+        <div><span class="form-eyebrow">Configura tu unidad</span><h3>Solicitud de compra</h3></div>
+        <span class="form-status">Correo directo</span>
+      </div>
+
+      <div class="config-options" aria-label="Tipo de uso">
+        <label class="config-option"><input type="radio" name="Uso" value="Industrial" checked><span>Industrial</span><small>Trabajo repetitivo, carga y prevención de lesiones.</small></label>
+        <label class="config-option"><input type="radio" name="Uso" value="Rehabilitación"><span>Rehabilitación</span><small>Rutinas guiadas, control de rango y seguimiento clínico.</small></label>
+        <label class="config-option"><input type="radio" name="Uso" value="Deportivo"><span>Deportivo</span><small>Entrenamiento asistido, medición y mejora de rendimiento.</small></label>
+      </div>
+
+      <div class="form-grid">
+        <label>Nombre<input type="text" name="Nombre" placeholder="Tu nombre" required></label>
+        <label>Contacto<input type="email" name="email" placeholder="correo@ejemplo.com" required></label>
+        <label>Estatura<input type="text" name="Estatura" placeholder="Ej. 1.75 m"></label>
+        <label>Contexto de uso<input type="text" name="Contexto" placeholder="Empresa, clínica, laboratorio..."></label>
+      </div>
+
+      <div class="module-selector" aria-label="Módulos requeridos">
+        <label><input type="checkbox" name="Modulos[]" value="Brazo derecho" checked> Brazo derecho</label>
+        <label><input type="checkbox" name="Modulos[]" value="Brazo izquierdo" checked> Brazo izquierdo</label>
+        <label><input type="checkbox" name="Modulos[]" value="Módulo dorsal" checked> Módulo dorsal</label>
+        <label><input type="checkbox" name="Modulos[]" value="App y dashboard"> App y dashboard</label>
+      </div>
+
+      <label class="notes-field">Objetivo principal<textarea name="Objetivo" rows="3" placeholder="Cuéntanos qué necesitas lograr con tu V.E.S.T.A."></textarea></label>
+
+      <button class="btn-primary purchase-action" type="submit">Solicitar compra personalizada</button>
+      <p class="form-footnote">Se preparará un correo dirigido a <strong>jtrejoh2300@alumno.ipn.mx</strong> con tu configuración.</p>
+    </form>
+  </div>
+
+  <div class="purchase-steps">
+    <div class="purchase-step"><span>1</span><strong>Diagnóstico</strong><p>Revisamos medidas, objetivos, restricciones y entorno de trabajo.</p></div>
+    <div class="purchase-step"><span>2</span><strong>Diseño a medida</strong><p>Ajustamos módulos, soportes, rangos de movimiento y calibración.</p></div>
+    <div class="purchase-step"><span>3</span><strong>Entrega calibrada</strong><p>Validamos el exoesqueleto con la app, sensores y perfil del usuario.</p></div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-logo-wrap"><img src="Logo V.E.S.T.A..png" alt="Logo V.E.S.T.A." class="footer-logo-img"><span class="footer-logo">V.E.S.T.A.</span></div>
+  <span class="footer-text">© 2026 V.E.S.T.A. — Exoesqueleto Inteligente · Todos los derechos reservados</span>
+  <span class="footer-ipn">IPN · México</span>
+</footer>
+
+<script src="vesta.js?v=mailto-ipn-20260611"></script>
+</body>
+</html>

@@ -1,22 +1,26 @@
-/* ═══════════════════════════════════════════════
-   V.E.S.T.A. — Exoesqueleto Inteligente
-   JavaScript principal · 2026
-   ═══════════════════════════════════════════════ */
+/*
+  Archivo      | vesta.js
+  Descripción  | JavaScript principal de V.E.S.T.A.; controla animaciones,
+               | navegación activa, menú móvil, descargas y notificaciones.
+*/
 
+/* Arranque     | Encapsula todo el script para evitar variables globales accidentales. */
 (function () {
   'use strict';
 
-  /* ── SCROLL REVEAL ── */
+  /* Scroll reveal | Selecciona tarjetas y filas que aparecerán al entrar en pantalla. */
   const revealEls = document.querySelectorAll(
-    '.valor-card, .obj-card, .member-card, .render-full-card, .sensor-chip, .stat-card, .download-card, .spec-row'
+    '.valor-card, .obj-card, .member-card, .render-full-card, .sensor-chip, .stat-card, .download-card, .spec-row, .purchase-showcase, .custom-order, .purchase-step, .config-option, .route-card'
   );
 
+  /* Estado inicial | Prepara los elementos ocultos antes de observar su visibilidad. */
   revealEls.forEach(el => {
     el.style.opacity = '0';
     el.style.transform = 'translateY(24px)';
     el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
   });
 
+  /* Observador    | Revela cada elemento con retraso leve cuando aparece en viewport. */
   const observer = new IntersectionObserver(entries => {
     entries.forEach((e, i) => {
       if (e.isIntersecting) {
@@ -31,10 +35,11 @@
 
   revealEls.forEach(el => observer.observe(el));
 
-  /* ── ACTIVE NAV ON SCROLL ── */
+  /* Navegación   | Guarda secciones y enlaces para marcar el link activo al hacer scroll. */
   const sections = document.querySelectorAll('section[id]');
-  const navLinks = document.querySelectorAll('.nav-links a');
+  const navLinks = document.querySelectorAll('.nav-links a[href^="#"]');
 
+  /* Scroll activo | Detecta la sección visible y actualiza la clase nav-active. */
   window.addEventListener('scroll', () => {
     const scrollY = window.scrollY + 100;
     sections.forEach(sec => {
@@ -46,17 +51,18 @@
     });
   });
 
-  /* ── MOBILE NAV TOGGLE ── */
+  /* Menú móvil   | Obtiene botón hamburguesa y drawer lateral para pantallas pequeñas. */
   const navToggle = document.getElementById('nav-toggle');
   const navDrawer = document.getElementById('nav-drawer');
 
   if (navToggle && navDrawer) {
+    /* Toggle menú  | Abre o cierra el drawer móvil al tocar el botón hamburguesa. */
     navToggle.addEventListener('click', () => {
       navToggle.classList.toggle('open');
       navDrawer.classList.toggle('open');
     });
 
-    // Cerrar drawer al hacer click en un enlace
+    /* Link drawer  | Cierra el menú móvil cuando el usuario elige una sección. */
     navDrawer.querySelectorAll('a').forEach(a => {
       a.addEventListener('click', () => {
         navToggle.classList.remove('open');
@@ -64,7 +70,7 @@
       });
     });
 
-    // Cerrar drawer al hacer scroll
+    /* Scroll drawer | Cierra el menú móvil si el usuario empieza a desplazarse. */
     window.addEventListener('scroll', () => {
       if (navDrawer.classList.contains('open')) {
         navToggle.classList.remove('open');
@@ -73,7 +79,7 @@
     }, { passive: true });
   }
 
-  /* ── TOAST NOTIFICATION ── */
+  /* Toast        | Muestra una notificación temporal reutilizable en la esquina inferior. */
   function showToast(message, icon = '✓') {
     let toast = document.getElementById('vesta-toast');
     if (!toast) {
@@ -88,6 +94,7 @@
     toast._timeout = setTimeout(() => toast.classList.remove('show'), 3500);
   }
 
+  /* Assets       | Define URLs externas y nombres de archivo para descargas pesadas. */
   const downloadAssets = {
     android: {
       url: 'https://media.githubusercontent.com/media/JosephT2244/V.E.S.T.A/main/V.E.S.T.A.apk',
@@ -99,7 +106,7 @@
     }
   };
 
-  /* ── HELPER: descarga archivo ── */
+  /* Descarga     | Crea un enlace temporal, dispara la descarga y confirma con toast. */
   function downloadLocal(fileUrl, toastMsg, toastIcon, downloadName) {
     const a = document.createElement('a');
     a.href = fileUrl;
@@ -110,7 +117,7 @@
     showToast(toastMsg, toastIcon);
   }
 
-  /* ── DOWNLOAD WORD ── */
+  /* Word         | Conecta el botón del análisis estático con el archivo .docx local. */
   const dlWordBtn = document.getElementById('dl-word');
   if (dlWordBtn) {
     dlWordBtn.addEventListener('click', () => {
@@ -122,7 +129,7 @@
     });
   }
 
-  /* ── DOWNLOAD ANDROID ── */
+  /* Android      | Asigna descarga APK a todos los botones con clase dl-android. */
   document.querySelectorAll('.dl-android').forEach(btn => {
     btn.addEventListener('click', () => {
       downloadLocal(
@@ -134,7 +141,7 @@
     });
   });
 
-  /* ── DOWNLOAD WINDOWS ── */
+  /* Windows      | Asigna descarga del paquete .zip a todos los botones dl-windows. */
   document.querySelectorAll('.dl-windows').forEach(btn => {
     btn.addEventListener('click', () => {
       downloadLocal(
@@ -146,7 +153,31 @@
     });
   });
 
-  /* ── SMOOTH ANCHOR + NAV OFFSET ── */
+  /* Compra       | Convierte la configuración personalizada en una solicitud por correo. */
+  const customOrderForm = document.getElementById('custom-order-form');
+  if (customOrderForm) {
+    customOrderForm.addEventListener('submit', e => {
+      e.preventDefault();
+      const data = new FormData(customOrderForm);
+      const modules = data.getAll('Modulos[]').join(', ') || 'Por definir';
+      const subject = encodeURIComponent('Solicitud de compra V.E.S.T.A. personalizada');
+      const body = encodeURIComponent(
+        `Hola, quiero cotizar un exoesqueleto V.E.S.T.A. 100% personalizado.\n\n` +
+        `Nombre: ${data.get('Nombre') || ''}\n` +
+        `Contacto: ${data.get('email') || ''}\n` +
+        `Tipo de uso: ${data.get('Uso') || 'Por definir'}\n` +
+        `Estatura: ${data.get('Estatura') || 'Por definir'}\n` +
+        `Contexto: ${data.get('Contexto') || 'Por definir'}\n` +
+        `Módulos: ${modules}\n` +
+        `Objetivo principal: ${data.get('Objetivo') || 'Por definir'}`
+      );
+
+      window.location.href = `mailto:jtrejoh2300@alumno.ipn.mx?subject=${subject}&body=${body}`;
+      showToast('Solicitud preparada para jtrejoh2300@alumno.ipn.mx', '✓');
+    });
+  }
+
+  /* Anclas       | Suaviza navegación interna y compensa la altura de la barra fija. */
   document.querySelectorAll('a[href^="#"]').forEach(a => {
     a.addEventListener('click', e => {
       const target = document.querySelector(a.getAttribute('href'));
@@ -157,8 +188,9 @@
     });
   });
 
-  /* ── BAR CHART ANIMATION ── */
+  /* Barras       | Prepara las barras del mockup para animarse cuando sean visibles. */
   const bars = document.querySelectorAll('.bar-fill');
+  /* Observador    | Restaura el ancho final de cada barra al aparecer en pantalla. */
   const barObserver = new IntersectionObserver(entries => {
     entries.forEach(e => {
       if (e.isIntersecting) {
@@ -168,6 +200,7 @@
     });
   }, { threshold: 0.5 });
 
+  /* Estado barras | Guarda el ancho final y arranca cada barra desde cero. */
   bars.forEach(bar => {
     const finalW = bar.style.width;
     bar.style.width = '0%';

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Producto V.E.S.T.A.: funcionamiento, ventajas, especificaciones y comparativa del exoesqueleto inteligente.">
+<title>Producto — V.E.S.T.A.</title>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;500;600;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo-wrap">
+    <img src="Logo V.E.S.T.A..png" alt="Logo V.E.S.T.A." class="nav-logo-img">
+    <span class="nav-logo-text">V.E.S.T.A.</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="producto.html" class="nav-active">Producto</a></li>
+    <li><a href="#funcionamiento">Sistema</a></li>
+    <li><a href="app.html">App</a></li>
+    <li><a href="compra.html">Comprar</a></li>
+    <li><a href="galeria.html">Galería</a></li>
+    <li><a href="descargas.html">Descargas</a></li>
+    <li><a href="equipo.html">Equipo</a></li>
+    <li><a href="https://josepht2244.github.io/technical_V.E.S.T.A.-/" class="nav-tech-link" target="_blank" rel="noopener">Portal Técnico</a></li>
+  </ul>
+  <a href="compra.html" class="nav-cta">Comprar</a>
+  <button class="nav-toggle" id="nav-toggle" aria-label="Menú"><span></span><span></span><span></span></button>
+</nav>
+
+<nav class="nav-drawer" id="nav-drawer">
+  <a href="producto.html">Producto</a>
+  <a href="#funcionamiento">Sistema</a>
+  <a href="app.html">App</a>
+  <a href="compra.html">Comprar</a>
+  <a href="galeria.html">Galería</a>
+  <a href="descargas.html">Descargas</a>
+  <a href="equipo.html">Equipo</a>
+  <a href="https://josepht2244.github.io/technical_V.E.S.T.A.-/" class="nav-tech-drawer" target="_blank" rel="noopener">Portal Técnico</a>
+</nav>
+
+<section class="page-hero" id="objetivo">
+  <div class="section-tag">Producto</div>
+  <h1 class="section-title">Exoesqueleto inteligente <span>de tren superior</span></h1>
+  <p class="section-desc">V.E.S.T.A. interpreta y replica el movimiento humano en tiempo real, reduciendo esfuerzo físico y ayudando a prevenir lesiones musculoesqueléticas.</p>
+
+  <div class="objetivo-grid">
+    <div class="objetivo-text">
+      <p>V.E.S.T.A. detecta movimientos mediante sensores de flexión en el codo y unidades inerciales MPU6050 en hombros. Las señales se procesan con un ESP32-S3, que traduce la intención de movimiento en comandos PWM para actuadores mecánicos.</p>
+      <p>Con inteligencia artificial embebida mediante TensorFlow Lite, el sistema aprende patrones de cada usuario y adapta su respuesta progresivamente.</p>
+      <p>El resultado es asistencia mecánica sincronizada, reducción del esfuerzo muscular y una plataforma modular para industria, rehabilitación y educación.</p>
+    </div>
+    <div class="objetivo-cards">
+      <div class="obj-card"><div class="obj-card-icon">🎯</div><div class="obj-card-title">Interpretación de movimiento</div><div class="obj-card-desc">Clasifica gestos articulares con precisión angular menor a 5 grados en tiempo real.</div></div>
+      <div class="obj-card"><div class="obj-card-icon">⚙️</div><div class="obj-card-title">Asistencia mecánica</div><div class="obj-card-desc">Replica movimiento humano con latencia inferior a 100 ms mediante servos de alto torque.</div></div>
+      <div class="obj-card"><div class="obj-card-icon">🧠</div><div class="obj-card-title">Control inteligente</div><div class="obj-card-desc">IA embebida para adaptación continua al usuario y reconocimiento de patrones.</div></div>
+      <div class="obj-card"><div class="obj-card-icon">📡</div><div class="obj-card-title">Ecosistema IoT</div><div class="obj-card-desc">Wi-Fi y Bluetooth con app V.E.S.T.A. Monitor para monitoreo y control remoto.</div></div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<section id="problema">
+  <div class="section-tag">Impacto</div>
+  <h2 class="section-title">Un problema <span>de escala global</span></h2>
+  <p class="section-desc">Las lesiones musculoesqueléticas son una de las principales causas de discapacidad laboral. V.E.S.T.A. propone asistencia física accesible para cambiar ese escenario.</p>
+
+  <div class="problema-grid">
+    <div class="stats-grid">
+      <div class="stat-card"><span class="stat-big">1.71B</span><div class="stat-desc">Personas con trastornos musculoesqueléticos en el mundo.</div></div>
+      <div class="stat-card"><span class="stat-big">60%</span><div class="stat-desc">Reducción del esfuerzo en escenarios asistidos por exoesqueletos activos.</div></div>
+      <div class="stat-card"><span class="stat-big">30%</span><div class="stat-desc">Potencial de reducción de lesiones en sectores con asistencia física.</div></div>
+      <div class="stat-card"><span class="stat-big">$525</span><div class="stat-desc">Costo base estimado frente a soluciones comerciales mucho más caras.</div></div>
+    </div>
+    <ul class="impacto-list">
+      <li><strong>Salud laboral:</strong>&nbsp;Reduce riesgo de TME en tareas repetitivas o de carga.</li>
+      <li><strong>Productividad:</strong>&nbsp;Ayuda a sostener rendimiento físico con menor fatiga.</li>
+      <li><strong>Accesibilidad:</strong>&nbsp;Pensado para pymes, centros educativos y clínicas.</li>
+      <li><strong>Sustentabilidad:</strong>&nbsp;Estructura modular, fabricable y reparable por partes.</li>
+    </ul>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<section id="valor">
+  <div class="section-tag">Diferenciadores</div>
+  <h2 class="section-title">Ventajas <span>competitivas</span></h2>
+  <p class="section-desc">V.E.S.T.A. combina mecánica accesible, control inteligente y una plataforma digital completa.</p>
+
+  <div class="valor-grid">
+    <div class="valor-card"><div class="valor-number">01</div><div class="valor-icon">💡</div><div class="valor-title">IA embebida</div><div class="valor-desc">TensorFlow Lite en ESP32-S3 para reconocimiento de patrones sin depender de la nube.</div><span class="valor-highlight">TensorFlow Lite</span></div>
+    <div class="valor-card"><div class="valor-number">02</div><div class="valor-icon">💰</div><div class="valor-title">Costo accesible</div><div class="valor-desc">Configuración base estimada en $525 USD, muy por debajo de soluciones industriales o médicas.</div><span class="valor-highlight">Accesible</span></div>
+    <div class="valor-card"><div class="valor-number">03</div><div class="valor-icon">📱</div><div class="valor-title">App completa</div><div class="valor-desc">Dashboard para Android y Windows con calibración, métricas y análisis de sesiones.</div><span class="valor-highlight">Android + Windows</span></div>
+    <div class="valor-card"><div class="valor-number">04</div><div class="valor-icon">🔄</div><div class="valor-title">Modular</div><div class="valor-desc">Puede configurarse como brazo individual o sistema bilateral con soporte dorsal.</div><span class="valor-highlight">Escalable</span></div>
+    <div class="valor-card"><div class="valor-number">05</div><div class="valor-icon">⚡</div><div class="valor-title">Tiempo real</div><div class="valor-desc">Muestreo a 100 Hz, control PWM y latencia objetivo inferior a 100 ms.</div><span class="valor-highlight">&lt;100 ms</span></div>
+    <div class="valor-card"><div class="valor-number">06</div><div class="valor-icon">🌱</div><div class="valor-title">Diseño reparable</div><div class="valor-desc">Piezas modulares fabricables con impresión 3D y mantenimiento por reemplazo de módulos.</div><span class="valor-highlight">Modular</span></div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<section id="funcionamiento">
+  <div class="section-tag">Arquitectura</div>
+  <h2 class="section-title">Cómo funciona <span>V.E.S.T.A.</span></h2>
+  <p class="section-desc">Tres etapas convierten movimiento humano en asistencia mecánica precisa.</p>
+
+  <div class="flow-steps">
+    <div class="flow-step"><div class="flow-num flow-num-1"><div><div>👁</div><div style="font-size:0.55rem">CAPTURA</div></div></div><div class="flow-title">1. Captura de movimiento</div><div class="flow-desc">Sensores flex e IMU capturan ángulos, aceleración y velocidad angular.</div></div>
+    <div class="flow-step"><div class="flow-num flow-num-2"><div><div>🧠</div><div style="font-size:0.55rem">PROCESO</div></div></div><div class="flow-title">2. Procesamiento e IA</div><div class="flow-desc">El ESP32-S3 filtra señales e interpreta intención de movimiento.</div></div>
+    <div class="flow-step"><div class="flow-num flow-num-3"><div><div>🦾</div><div style="font-size:0.55rem">ACCIÓN</div></div></div><div class="flow-title">3. Respuesta mecánica</div><div class="flow-desc">El PCA9685 controla servos DS51150 para replicar el movimiento.</div></div>
+  </div>
+
+  <div class="sensors-title">Componentes del sistema</div>
+  <div class="sensors-grid">
+    <div class="sensor-chip"><div class="sensor-name">ESP32-S3</div><div class="sensor-role">CPU principal · Wi-Fi/BT · TensorFlow Lite</div></div>
+    <div class="sensor-chip"><div class="sensor-name">MPU6050</div><div class="sensor-role">IMU · Acelerómetro + giroscopio · I2C</div></div>
+    <div class="sensor-chip"><div class="sensor-name">PCA9685</div><div class="sensor-role">Controlador PWM · 16 canales · 12 bit</div></div>
+    <div class="sensor-chip"><div class="sensor-name">DS51150</div><div class="sensor-role">Servo alto torque · 150 kg·cm</div></div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<section id="completo">
+  <div class="section-tag">Diseño integral</div>
+  <h2 class="section-title">Tren superior <span>completo</span></h2>
+  <p class="section-desc">Soporte bilateral para ambos brazos y módulo dorsal para estabilizar columna y hombros.</p>
+
+  <div class="completo-grid">
+    <div class="exo-diagram system-visual-card">
+      <div class="system-kicker">Sistema completo V.E.S.T.A.</div>
+      <img src="Exoesqueleto de lado.png" alt="Exoesqueleto V.E.S.T.A. completo vista lateral" class="system-render-img">
+      <div class="system-badges"><span>Soporte dorsal</span><span>Brazos bilaterales</span><span>Ajuste antropométrico</span></div>
+      <div class="exo-caption">Arquitectura modular lista para escalar de un brazo a tren superior completo.</div>
+    </div>
+    <div class="exo-specs">
+      <div class="spec-row"><span class="spec-icon">⚡</span><span class="spec-name">Torque por actuador</span><span class="spec-val">150 kg·cm</span></div>
+      <div class="spec-row"><span class="spec-icon">🔢</span><span class="spec-name">Canales PWM</span><span class="spec-val">16 ch</span></div>
+      <div class="spec-row"><span class="spec-icon">📡</span><span class="spec-name">Frecuencia de muestreo</span><span class="spec-val">100 Hz</span></div>
+      <div class="spec-row"><span class="spec-icon">⏱</span><span class="spec-name">Latencia del sistema</span><span class="spec-val">&lt;100 ms</span></div>
+      <div class="spec-row"><span class="spec-icon">🎯</span><span class="spec-name">Error angular máximo</span><span class="spec-val">&lt;5°</span></div>
+      <div class="spec-row"><span class="spec-icon">📶</span><span class="spec-name">Conectividad</span><span class="spec-val">Wi-Fi + BT</span></div>
+      <div class="spec-row"><span class="spec-icon">🔋</span><span class="spec-name">Alimentación</span><span class="spec-val">12V DC</span></div>
+      <div class="spec-row"><span class="spec-icon">🌿</span><span class="spec-name">Material estructura</span><span class="spec-val">PETG + 3D</span></div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<section id="comparativa">
+  <div class="section-tag">Posicionamiento</div>
+  <h2 class="section-title">V.E.S.T.A. vs. el <span>mercado</span></h2>
+  <p class="section-desc">Más accesible, modular y conectado frente a alternativas comerciales o académicas.</p>
+
+  <div class="tabla-wrapper">
+    <table>
+      <thead><tr><th>Solución</th><th>Tipo</th><th>Costo aprox.</th><th>IA</th><th>App</th><th>Modular</th><th>Accesible</th></tr></thead>
+      <tbody>
+        <tr class="vesta-row"><td class="td-name td-vesta">V.E.S.T.A.</td><td class="td-vesta">Activo · Comercial</td><td class="td-vesta">~$525 USD</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td></tr>
+        <tr><td class="td-name">ReWalk</td><td>Activo · Médico</td><td>$70,000+</td><td class="partial">◐</td><td class="check">✓</td><td class="cross">✗</td><td class="cross">✗</td></tr>
+        <tr><td class="td-name">HAL</td><td>Activo · Médico</td><td>$50,000+</td><td class="check">✓</td><td class="partial">◐</td><td class="cross">✗</td><td class="cross">✗</td></tr>
+        <tr><td class="td-name">Exoesqueletos industriales</td><td>Pasivo · Industrial</td><td>$5,000+</td><td class="cross">✗</td><td class="cross">✗</td><td class="partial">◐</td><td class="cross">✗</td></tr>
+        <tr><td class="td-name">Proyectos académicos</td><td>Activo · Académico</td><td>$750+</td><td class="cross">✗</td><td class="cross">✗</td><td class="partial">◐</td><td class="check">✓</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-logo-wrap"><img src="Logo V.E.S.T.A..png" alt="Logo V.E.S.T.A." class="footer-logo-img"><span class="footer-logo">V.E.S.T.A.</span></div>
+  <span class="footer-text">© 2026 V.E.S.T.A. — Exoesqueleto Inteligente · Todos los derechos reservados</span>
+  <span class="footer-ipn">IPN · México</span>
+</footer>
+
+<script src="vesta.js?v=mailto-ipn-20260611"></script>
+</body>
+</html>

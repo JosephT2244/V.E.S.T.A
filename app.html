@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="App V.E.S.T.A. Monitor para Android y Windows: dashboard, calibración, modos y análisis.">
+<title>App Monitor — V.E.S.T.A.</title>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;500;600;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo-wrap"><img src="Logo V.E.S.T.A..png" alt="Logo V.E.S.T.A." class="nav-logo-img"><span class="nav-logo-text">V.E.S.T.A.</span></a>
+  <ul class="nav-links">
+    <li><a href="producto.html">Producto</a></li>
+    <li><a href="producto.html#funcionamiento">Sistema</a></li>
+    <li><a href="app.html" class="nav-active">App</a></li>
+    <li><a href="compra.html">Comprar</a></li>
+    <li><a href="galeria.html">Galería</a></li>
+    <li><a href="descargas.html">Descargas</a></li>
+    <li><a href="equipo.html">Equipo</a></li>
+    <li><a href="https://josepht2244.github.io/technical_V.E.S.T.A.-/" class="nav-tech-link" target="_blank" rel="noopener">Portal Técnico</a></li>
+  </ul>
+  <a href="descargas.html" class="nav-cta">Descargar</a>
+  <button class="nav-toggle" id="nav-toggle" aria-label="Menú"><span></span><span></span><span></span></button>
+</nav>
+
+<nav class="nav-drawer" id="nav-drawer">
+  <a href="producto.html">Producto</a>
+  <a href="producto.html#funcionamiento">Sistema</a>
+  <a href="app.html">App</a>
+  <a href="compra.html">Comprar</a>
+  <a href="galeria.html">Galería</a>
+  <a href="descargas.html">Descargas</a>
+  <a href="equipo.html">Equipo</a>
+  <a href="https://josepht2244.github.io/technical_V.E.S.T.A.-/" class="nav-tech-drawer" target="_blank" rel="noopener">Portal Técnico</a>
+</nav>
+
+<section class="page-hero" id="app">
+  <div class="section-tag">Ecosistema digital</div>
+  <h1 class="section-title">App <span>V.E.S.T.A. Monitor</span></h1>
+  <p class="section-desc">El centro de control del exoesqueleto. Disponible para Android y Windows, con dashboard en tiempo real y módulo de inteligencia adaptativa.</p>
+
+  <div class="app-grid">
+    <div>
+      <div class="app-mockup">
+        <div class="app-bar"><span class="app-logo-small">V.E.S.T.A</span><span class="app-status">Conectado · Sesión activa</span></div>
+        <div class="app-metrics">
+          <div class="metric-box"><div class="metric-label">Latencia</div><span class="metric-value">42<span class="metric-unit">ms</span></span></div>
+          <div class="metric-box"><div class="metric-label">Precisión</div><span class="metric-value">97<span class="metric-unit">%</span></span></div>
+          <div class="metric-box"><div class="metric-label">Batería</div><span class="metric-value">84<span class="metric-unit">%</span></span></div>
+          <div class="metric-box"><div class="metric-label">Temperatura</div><span class="metric-value">36<span class="metric-unit">°C</span></span></div>
+        </div>
+        <div class="app-bar-chart">
+          <div class="bar-label">Actividad articular — Sesión actual</div>
+          <div class="bar-row"><span class="bar-name">Hombro D</span><div class="bar-track"><div class="bar-fill" style="width:82%"></div></div></div>
+          <div class="bar-row"><span class="bar-name">Hombro I</span><div class="bar-track"><div class="bar-fill" style="width:75%"></div></div></div>
+          <div class="bar-row"><span class="bar-name">Codo D</span><div class="bar-track"><div class="bar-fill" style="width:91%"></div></div></div>
+          <div class="bar-row"><span class="bar-name">Codo I</span><div class="bar-track"><div class="bar-fill" style="width:68%"></div></div></div>
+          <div class="bar-row"><span class="bar-name">Espalda</span><div class="bar-track"><div class="bar-fill" style="width:55%"></div></div></div>
+        </div>
+        <div class="app-mode-row"><div class="mode-btn mode-active">Asistivo</div><div class="mode-btn mode-inactive">Pasivo</div><div class="mode-btn mode-inactive">Rehab.</div></div>
+      </div>
+
+      <div class="app-download-strip">
+        <div class="app-download-text">Descarga <span>V.E.S.T.A. Monitor</span></div>
+        <div class="app-dl-btns"><button class="btn-android dl-android">Android</button><button class="btn-windows dl-windows">Windows</button></div>
+      </div>
+    </div>
+
+    <div class="app-features">
+      <div class="app-feature"><div class="app-feature-icon">📊</div><div class="app-feature-text"><h4>Dashboard en tiempo real</h4><p>Latencia, precisión angular, temperatura de actuadores y batería.</p></div></div>
+      <div class="app-feature"><div class="app-feature-icon">⚙️</div><div class="app-feature-text"><h4>Calibración remota</h4><p>Ajuste de sensibilidad por articulación y rangos de movimiento seguros.</p></div></div>
+      <div class="app-feature"><div class="app-feature-icon">🧠</div><div class="app-feature-text"><h4>IA adaptativa</h4><p>Aprende patrones de movimiento y mejora la sincronización por sesión.</p></div></div>
+      <div class="app-feature"><div class="app-feature-icon">📈</div><div class="app-feature-text"><h4>Análisis de sesiones</h4><p>Histórico exportable para uso clínico, industrial o educativo.</p></div></div>
+      <div class="app-feature"><div class="app-feature-icon">🔄</div><div class="app-feature-text"><h4>3 modos de operación</h4><p>Asistivo, pasivo y rehabilitación con retroalimentación guiada.</p></div></div>
+      <div class="app-feature"><div class="app-feature-icon">☁️</div><div class="app-feature-text"><h4>Sincronización</h4><p>Respaldo de configuración y acceso a historial desde otros dispositivos.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-logo-wrap"><img src="Logo V.E.S.T.A..png" alt="Logo V.E.S.T.A." class="footer-logo-img"><span class="footer-logo">V.E.S.T.A.</span></div>
+  <span class="footer-text">© 2026 V.E.S.T.A. — Exoesqueleto Inteligente · Todos los derechos reservados</span>
+  <span class="footer-ipn">IPN · México</span>
+</footer>
+
+<script src="vesta.js?v=mailto-ipn-20260611"></script>
+</body>
+</html>
