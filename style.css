@@ -506,7 +506,7 @@ section { padding: 80px 80px; }
 .flow-title { font-family: 'Rajdhani', sans-serif; font-weight: 700; font-size: 1rem; color: var(--white); margin-bottom: 8px; }
 .flow-desc { font-size: 0.83rem; color: var(--silver); line-height: 1.6; }
 .sensors-title { font-family: 'Rajdhani', sans-serif; font-size: 0.75rem; letter-spacing: 2px; text-transform: uppercase; color: var(--silver); margin-bottom: 16px; margin-top: 40px; }
-.sensors-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+.sensors-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; }
 .sensor-chip { background: rgba(0,229,255,0.04); border: 1px solid rgba(0,229,255,0.15); border-radius: 8px; padding: 14px; text-align: center; }
 .sensor-name { font-family: 'Rajdhani', sans-serif; font-weight: 700; font-size: 0.85rem; color: var(--cyan); margin-bottom: 4px; }
 .sensor-role { font-size: 0.73rem; color: var(--silver); line-height: 1.4; }

@@ -6,7 +6,7 @@
 <meta name="description" content="Producto V.E.S.T.A.: funcionamiento, ventajas, especificaciones y comparativa del exoesqueleto inteligente.">
 <title>Producto — V.E.S.T.A.</title>
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;500;600;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css?v=buttons-20260611">
 </head>
 <body>
 
@@ -47,7 +47,7 @@
 
   <div class="objetivo-grid">
     <div class="objetivo-text">
-      <p>V.E.S.T.A. detecta movimientos mediante sensores de flexión en el codo y unidades inerciales MPU6050 en hombros. Las señales se procesan con un ESP32-S3, que traduce la intención de movimiento en comandos PWM para actuadores mecánicos.</p>
+      <p>V.E.S.T.A. recibe la intención de asistencia mediante botones anclados al antebrazo y unidades inerciales MPU6050 en hombros. Las señales se procesan con un ESP32-S3, que traduce la entrada del usuario en comandos PWM para actuadores mecánicos.</p>
       <p>Con inteligencia artificial embebida mediante TensorFlow Lite, el sistema aprende patrones de cada usuario y adapta su respuesta progresivamente.</p>
       <p>El resultado es asistencia mecánica sincronizada, reducción del esfuerzo muscular y una plataforma modular para industria, rehabilitación y educación.</p>
     </div>
@@ -105,10 +105,10 @@
 <section id="funcionamiento">
   <div class="section-tag">Arquitectura</div>
   <h2 class="section-title">Cómo funciona <span>V.E.S.T.A.</span></h2>
-  <p class="section-desc">Tres etapas convierten movimiento humano en asistencia mecánica precisa.</p>
+  <p class="section-desc">Tres etapas convierten la entrada del usuario en asistencia mecánica precisa.</p>
 
   <div class="flow-steps">
-    <div class="flow-step"><div class="flow-num flow-num-1"><div><div>👁</div><div style="font-size:0.55rem">CAPTURA</div></div></div><div class="flow-title">1. Captura de movimiento</div><div class="flow-desc">Sensores flex e IMU capturan ángulos, aceleración y velocidad angular.</div></div>
+    <div class="flow-step"><div class="flow-num flow-num-1"><div><div>👁</div><div style="font-size:0.55rem">CAPTURA</div></div></div><div class="flow-title">1. Captura de entrada</div><div class="flow-desc">Botones de antebrazo e IMU registran comandos, aceleración y velocidad angular.</div></div>
     <div class="flow-step"><div class="flow-num flow-num-2"><div><div>🧠</div><div style="font-size:0.55rem">PROCESO</div></div></div><div class="flow-title">2. Procesamiento e IA</div><div class="flow-desc">El ESP32-S3 filtra señales e interpreta intención de movimiento.</div></div>
     <div class="flow-step"><div class="flow-num flow-num-3"><div><div>🦾</div><div style="font-size:0.55rem">ACCIÓN</div></div></div><div class="flow-title">3. Respuesta mecánica</div><div class="flow-desc">El PCA9685 controla servos DS51150 para replicar el movimiento.</div></div>
   </div>
@@ -116,6 +116,7 @@
   <div class="sensors-title">Componentes del sistema</div>
   <div class="sensors-grid">
     <div class="sensor-chip"><div class="sensor-name">ESP32-S3</div><div class="sensor-role">CPU principal · Wi-Fi/BT · TensorFlow Lite</div></div>
+    <div class="sensor-chip"><div class="sensor-name">Botones de antebrazo</div><div class="sensor-role">Entrada física · Montaje anclado · Activación directa</div></div>
     <div class="sensor-chip"><div class="sensor-name">MPU6050</div><div class="sensor-role">IMU · Acelerómetro + giroscopio · I2C</div></div>
     <div class="sensor-chip"><div class="sensor-name">PCA9685</div><div class="sensor-role">Controlador PWM · 16 canales · 12 bit</div></div>
     <div class="sensor-chip"><div class="sensor-name">DS51150</div><div class="sensor-role">Servo alto torque · 150 kg·cm</div></div>
